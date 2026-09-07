@@ -125,12 +125,12 @@ index 61edbb2345..6a06670438 100644
  	const auto source = frame.source;
  	const auto ratio = style::DevicePixelRatio();
 diff --git a/Telegram/lib_ui/ui/text/text_renderer.cpp b/Telegram/lib_ui/ui/text/text_renderer.cpp
-index c27730d654..25c0ac2bb1 100644
+index f22facd22b..1a46c34adf 100644
 --- a/Telegram/lib_ui/ui/text/text_renderer.cpp
 +++ b/Telegram/lib_ui/ui/text/text_renderer.cpp
-@@ -18,6 +18,10 @@
- #include <private/qharfbuzz_p.h>
- #endif // Qt < 6.0.0
+@@ -14,6 +14,10 @@
+ 
+ #include <QtGui/QPaintEngine>
  
 +namespace Ui {
 +void FillSpoilerRectEx(QPainter &p, QRect rect, const SpoilerMessFrame &frame, QPoint originShift, bool forText = false);
@@ -139,9 +139,9 @@ index c27730d654..25c0ac2bb1 100644
  namespace Ui::Text {
  namespace {
  
-@@ -1629,7 +1633,7 @@ void Renderer::paintSpoilerRects(
- 	const auto frame = _spoilerCache->lookup(color->c)->frame(index);
+@@ -1588,7 +1592,7 @@ void Renderer::paintSpoilerRects(
  	if (_spoilerCache) {
+ 		const auto frame = _spoilerCache->lookup(color->c)->frame(index);
  		for (const auto &rect : rects) {
 -			Ui::FillSpoilerRect(*_p, rect, frame, -rect.topLeft());
 +			Ui::FillSpoilerRectEx(*_p, rect, frame, -rect.topLeft(), true);

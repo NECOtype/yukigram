@@ -6,7 +6,7 @@ Subject: [PATCH] (Translations) English
 
 diff --git a/Telegram/Resources/langs/yukigram/en.json b/Telegram/Resources/langs/yukigram/en.json
 new file mode 100644
-index 0000000000..0eec394206
+index 0000000000..0880805137
 --- /dev/null
 +++ b/Telegram/Resources/langs/yukigram/en.json
 @@ -0,0 +1,184 @@
@@ -126,6 +126,8 @@ index 0000000000..0eec394206
 +    "opt/icon-theme-symbolic/desc": "",
 +    "opt/inferred-peer-dc/name": "Show inferred peer DC",
 +    "opt/inferred-peer-dc/desc": "",
++    "opt/kinetic-scroller/name": "Kinetic scrolling",
++    "opt/kinetic-scroller/desc": "",
 +    "opt/large-sticker-preview/name": "Fullsize sticker preview",
 +    "opt/large-sticker-preview/desc": "",
 +    "opt/mpris-call-hangup/name": "Control calls with MPRIS",
@@ -140,8 +142,6 @@ index 0000000000..0eec394206
 +    "opt/preview-replace/desc": "",
 +    "opt/preview-replace-patterns/name": "Patterns to replace in previews",
 +    "opt/preview-replace-patterns/desc": "One rule per line.\nRule is a pair of regex pattern\nand what to replace it with.\nRule parts are separated by space.\nUse \\1, \\2, etc. for capture groups.",
-+    "opt/qscroller/name": "Kinetic scrolling",
-+    "opt/qscroller/desc": "",
 +    "opt/quick-admin-list/name": "Admin list button",
 +    "opt/quick-admin-list/desc": "",
 +    "opt/quick-recent-actions/name": "Recent actions button",

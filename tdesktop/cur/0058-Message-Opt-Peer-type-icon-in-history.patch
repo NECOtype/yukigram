@@ -7,7 +7,7 @@ This patch is adapted from Kotatogram.
 Original author: RadRussianRus <radrussianrus@gmail.com>
 
 diff --git a/Telegram/SourceFiles/history/view/history_view_message.cpp b/Telegram/SourceFiles/history/view/history_view_message.cpp
-index 601e8b247a..21bcee9ed1 100644
+index 938b0442b1..f235d40bdb 100644
 --- a/Telegram/SourceFiles/history/view/history_view_message.cpp
 +++ b/Telegram/SourceFiles/history/view/history_view_message.cpp
 @@ -61,6 +61,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
@@ -63,7 +63,7 @@ index 601e8b247a..21bcee9ed1 100644
  				accumulate_max(maxWidth, namew);
  				accumulate_max(nonTextMax, namew);
  			} else if (via && !displayForwardedFrom()) {
-@@ -2518,6 +2550,19 @@ void Message::paintFromName(
+@@ -2526,6 +2558,19 @@ void Message::paintFromName(
  		context,
  		colorIndex(),
  		colorCollectible());
@@ -83,7 +83,7 @@ index 601e8b247a..21bcee9ed1 100644
  	const auto nameText = [&] {
  		if (from) {
  			validateFromNameText(from);
-@@ -4219,6 +4264,8 @@ bool Message::getStateFromName(
+@@ -4233,6 +4278,8 @@ bool Message::getStateFromName(
  			availableWidth -= st::msgPadding.right() + badgeWidth;
  		}
  		const auto item = data();
@@ -92,12 +92,12 @@ index 601e8b247a..21bcee9ed1 100644
  		const auto from = displayFrom();
  		const auto nameText = [&]() -> const Ui::Text::String * {
  			if (from) {
-@@ -4250,7 +4297,7 @@ bool Message::getStateFromName(
+@@ -4276,7 +4323,7 @@ bool Message::getStateFromName(
  		}
  		if (point.x() >= availableLeft
  			&& point.x() < availableLeft + availableWidth
--			&& point.x() < availableLeft + nameText->maxWidth()) {
-+			&& point.x() < availableLeft + nameText->maxWidth() + chatIconWidth) {
+-			&& point.x() < availableLeft + nameWidth) {
++			&& point.x() < availableLeft + nameWidth + chatIconWidth) {
  			outResult->link = fromLink();
  			recordLinkRipplePoint(point, trect.topLeft());
  			_fromLinkRipplePointSet = 1;

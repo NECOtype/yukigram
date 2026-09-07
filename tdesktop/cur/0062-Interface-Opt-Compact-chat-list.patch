@@ -148,7 +148,7 @@ index 5ba1e72856..1477fd3a41 100644
  		|| (activeMatters && _cornerBadgeUserpic->active != active)
  		|| _cornerBadgeUserpic->hidden != (hidden ? 1 : 0)
 diff --git a/Telegram/SourceFiles/dialogs/ui/dialogs_layout.cpp b/Telegram/SourceFiles/dialogs/ui/dialogs_layout.cpp
-index d288113f54..0e61b104c7 100644
+index 645e80c8df..2a6c366c88 100644
 --- a/Telegram/SourceFiles/dialogs/ui/dialogs_layout.cpp
 +++ b/Telegram/SourceFiles/dialogs/ui/dialogs_layout.cpp
 @@ -20,6 +20,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL

@@ -7,7 +7,7 @@ This patch is adapted from 64Gram.
 Original author: c0re100 <corehusky@gmail.com>
 
 diff --git a/Telegram/SourceFiles/boxes/sticker_set_box.cpp b/Telegram/SourceFiles/boxes/sticker_set_box.cpp
-index 9d1e8345ab..2803ff5e27 100644
+index 77df17e6e3..7e7c8ee8d8 100644
 --- a/Telegram/SourceFiles/boxes/sticker_set_box.cpp
 +++ b/Telegram/SourceFiles/boxes/sticker_set_box.cpp
 @@ -30,6 +30,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL

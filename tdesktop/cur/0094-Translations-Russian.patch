@@ -6,7 +6,7 @@ Subject: [PATCH] (Translations) Russian
 
 diff --git a/Telegram/Resources/langs/yukigram/ru.json b/Telegram/Resources/langs/yukigram/ru.json
 new file mode 100644
-index 0000000000..ed441de49e
+index 0000000000..f8e422a1e5
 --- /dev/null
 +++ b/Telegram/Resources/langs/yukigram/ru.json
 @@ -0,0 +1,190 @@
@@ -132,6 +132,8 @@ index 0000000000..ed441de49e
 +    "opt/icon-theme-symbolic/desc": "",
 +    "opt/inferred-peer-dc/name": "Угадывать дата-центр пира",
 +    "opt/inferred-peer-dc/desc": "",
++    "opt/kinetic-scroller/name": "Кинетическая прокрутка",
++    "opt/kinetic-scroller/desc": "",
 +    "opt/large-sticker-preview/name": "Полноразмерный предпросмотр стикеров",
 +    "opt/large-sticker-preview/desc": "",
 +    "opt/mpris-call-hangup/name": "Управлять звонками с помощью MPRIS",
@@ -146,8 +148,6 @@ index 0000000000..ed441de49e
 +    "opt/preview-replace/desc": "",
 +    "opt/preview-replace-patterns/name": "Шаблоны замены превью сайтов",
 +    "opt/preview-replace-patterns/desc": "Одно правило на строку.\nПравила состоят из регулярки\nи на что её заменить.\nКуски правила разделены пробелом.\n\\1, \\2, и т.д. — захваченные группы.",
-+    "opt/qscroller/name": "Кинетическая прокрутка",
-+    "opt/qscroller/desc": "",
 +    "opt/quick-admin-list/name": "Кнопка списка админов",
 +    "opt/quick-admin-list/desc": "",
 +    "opt/quick-recent-actions/name": "Кнопка недавних действий",

@@ -100,7 +100,7 @@ index 1dce8e1959..5addc6e0be 100644
  
  [[maybe_unused]] constexpr auto kShowFolder = {
 diff --git a/Telegram/SourceFiles/history/history_inner_widget.cpp b/Telegram/SourceFiles/history/history_inner_widget.cpp
-index 20c039b914..d170bc4fed 100644
+index da4404d910..1516b3486a 100644
 --- a/Telegram/SourceFiles/history/history_inner_widget.cpp
 +++ b/Telegram/SourceFiles/history/history_inner_widget.cpp
 @@ -11,6 +11,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
@@ -120,7 +120,7 @@ index 20c039b914..d170bc4fed 100644
  	HistoryView::Reactions::SetupManagerList(
  		_reactionsManager.get(),
  		_reactionsItem.value());
-@@ -6505,6 +6508,38 @@ bool CanSendReply(not_null<const HistoryItem*> item) {
+@@ -6504,6 +6507,38 @@ bool CanSendReply(not_null<const HistoryItem*> item) {
  	return true;
  }
  
@@ -172,10 +172,10 @@ index e134ea07e6..fd6b9c4bb8 100644
  	[[nodiscard]] auto reactionButtonParameters(
  		not_null<const Element*> view,
 diff --git a/Telegram/SourceFiles/history/history_widget.cpp b/Telegram/SourceFiles/history/history_widget.cpp
-index b3b942020c..af1c964bb7 100644
+index a50175fb0f..bdd18b44b3 100644
 --- a/Telegram/SourceFiles/history/history_widget.cpp
 +++ b/Telegram/SourceFiles/history/history_widget.cpp
-@@ -10726,7 +10726,7 @@ bool HistoryWidget::updateCanSendMessage() {
+@@ -10778,7 +10778,7 @@ bool HistoryWidget::updateCanSendMessage() {
  	return true;
  }
  
@@ -184,7 +184,7 @@ index b3b942020c..af1c964bb7 100644
  	if (!_list) {
  		return;
  	}
-@@ -10738,7 +10738,7 @@ void HistoryWidget::forwardSelected() {
+@@ -10790,7 +10790,7 @@ void HistoryWidget::forwardSelected() {
  			if (const auto strong = weak.get()) {
  				strong->clearSelected();
  			}

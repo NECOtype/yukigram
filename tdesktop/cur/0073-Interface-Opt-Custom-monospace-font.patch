@@ -5,12 +5,12 @@ Subject: [PATCH] (Interface)(Opt) Custom monospace font
 
 
 diff --git a/Telegram/SourceFiles/core/launcher.cpp b/Telegram/SourceFiles/core/launcher.cpp
-index ef757e3aba..adcc3380ea 100644
+index b6f53ec94a..5d2e3b6cb8 100644
 --- a/Telegram/SourceFiles/core/launcher.cpp
 +++ b/Telegram/SourceFiles/core/launcher.cpp
-@@ -26,6 +26,10 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
- #include <QtCore/QStandardPaths>
- #include <QtCore/QLibraryInfo>
+@@ -30,6 +30,10 @@ extern "C" {
+ #include <libavutil/log.h>
+ } // extern "C"
  
 +namespace style {
 +extern QString Yukigram_MonospaceFont;
@@ -19,7 +19,7 @@ index ef757e3aba..adcc3380ea 100644
  namespace Core {
  namespace {
  
-@@ -395,6 +399,7 @@ int Launcher::exec() {
+@@ -399,6 +403,7 @@ int Launcher::exec() {
  	Logs::start();
  	base::options::init(cWorkingDir() + "tdata/experimental_options.json");
  	Yukigram::Options::init();
@@ -198,7 +198,7 @@ index ed79f9bc40..14f0c56f07 100644
  
  } // namespace Ui
 diff --git a/Telegram/lib_ui/ui/style/style_core_font.cpp b/Telegram/lib_ui/ui/style/style_core_font.cpp
-index 5324f1e711..e08cd94b54 100644
+index 46b65c4b52..5f0f92d188 100644
 --- a/Telegram/lib_ui/ui/style/style_core_font.cpp
 +++ b/Telegram/lib_ui/ui/style/style_core_font.cpp
 @@ -56,6 +56,10 @@ void SetCustomFont(const QString &font) {
@@ -212,7 +212,7 @@ index 5324f1e711..e08cd94b54 100644
  namespace internal {
  
  struct ResolvedFont {
-@@ -138,7 +142,11 @@ bool LoadCustomFont(const QString &filePath) {
+@@ -163,7 +167,11 @@ bool LoadCustomFont(const QString &filePath) {
  	return QString();
  }
  
@@ -225,7 +225,7 @@ index 5324f1e711..e08cd94b54 100644
  	static const auto family = [&]() -> QString {
  		const auto manual = ManualMonospaceFont();
  		const auto system = SystemMonospaceFont();
-@@ -530,6 +538,14 @@ OwnedFont::OwnedFont(const QString &custom, FontFlags flags, int size)
+@@ -560,6 +568,14 @@ OwnedFont::OwnedFont(const QString &custom, FontFlags flags, int size)
  
  } // namespace internal
  
