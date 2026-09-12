@@ -100,7 +100,7 @@ index 1dce8e1959..5addc6e0be 100644
  
  [[maybe_unused]] constexpr auto kShowFolder = {
 diff --git a/Telegram/SourceFiles/history/history_inner_widget.cpp b/Telegram/SourceFiles/history/history_inner_widget.cpp
-index da4404d910..1516b3486a 100644
+index 1b18c83ed1..5508b98c9f 100644
 --- a/Telegram/SourceFiles/history/history_inner_widget.cpp
 +++ b/Telegram/SourceFiles/history/history_inner_widget.cpp
 @@ -11,6 +11,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
@@ -120,7 +120,7 @@ index da4404d910..1516b3486a 100644
  	HistoryView::Reactions::SetupManagerList(
  		_reactionsManager.get(),
  		_reactionsItem.value());
-@@ -6504,6 +6507,38 @@ bool CanSendReply(not_null<const HistoryItem*> item) {
+@@ -6502,6 +6505,38 @@ bool CanSendReply(not_null<const HistoryItem*> item) {
  	return true;
  }
  
@@ -207,7 +207,7 @@ index 9277d75e78..172aed8c01 100644
  	void clearSelected();
  
 diff --git a/Telegram/SourceFiles/window/window_peer_menu.cpp b/Telegram/SourceFiles/window/window_peer_menu.cpp
-index 4a03ba9ac0..b7249d7890 100644
+index a96e476eea..02f870fd88 100644
 --- a/Telegram/SourceFiles/window/window_peer_menu.cpp
 +++ b/Telegram/SourceFiles/window/window_peer_menu.cpp
 @@ -3091,7 +3091,8 @@ base::weak_qptr<Ui::BoxContent> ShowChooseRecipientBox(
@@ -270,7 +270,7 @@ index 4a03ba9ac0..b7249d7890 100644
  			const auto peer = thread->peer();
  			if (peer->isSelf()
  				&& !draft.ids.empty()
-@@ -3696,6 +3718,7 @@ base::weak_qptr<Ui::BoxContent> ShowForwardMessagesBox(
+@@ -3699,6 +3721,7 @@ base::weak_qptr<Ui::BoxContent> ShowForwardMessagesBox(
  				state->box->forwardOptions(),
  				[=](Ui::ForwardOptions o) {
  					state->box->setForwardOptions(o);
@@ -278,7 +278,7 @@ index 4a03ba9ac0..b7249d7890 100644
  				},
  				state->menu->lifetime());
  
-@@ -3807,21 +3830,25 @@ base::weak_qptr<Ui::BoxContent> ShowForwardMessagesBox(
+@@ -3810,21 +3833,25 @@ base::weak_qptr<Ui::BoxContent> ShowForwardMessagesBox(
  base::weak_qptr<Ui::BoxContent> ShowForwardMessagesBox(
  		not_null<Window::SessionNavigation*> navigation,
  		Data::ForwardDraft &&draft,

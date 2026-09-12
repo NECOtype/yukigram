@@ -5,7 +5,7 @@ Subject: [PATCH] (Yukigram) Options framework
 
 
 diff --git a/Telegram/SourceFiles/core/launcher.cpp b/Telegram/SourceFiles/core/launcher.cpp
-index a8e56aeb76..b6f53ec94a 100644
+index ed1b6ceae9..2343f1a265 100644
 --- a/Telegram/SourceFiles/core/launcher.cpp
 +++ b/Telegram/SourceFiles/core/launcher.cpp
 @@ -20,6 +20,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
@@ -24,7 +24,7 @@ index a8e56aeb76..b6f53ec94a 100644
  
  	// Must be called after options are inited.
  	initHighDpi();
-@@ -672,6 +674,7 @@ void Launcher::processArguments() {
+@@ -676,6 +678,7 @@ void Launcher::processArguments() {
  int Launcher::executeApplication() {
  	FilteredCommandLineArguments arguments(_argc, _argv);
  	Sandbox sandbox(arguments.count(), arguments.values());

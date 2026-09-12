@@ -5,7 +5,7 @@ Subject: [PATCH] (Interface)(Opt) Custom monospace font
 
 
 diff --git a/Telegram/SourceFiles/core/launcher.cpp b/Telegram/SourceFiles/core/launcher.cpp
-index b6f53ec94a..5d2e3b6cb8 100644
+index 2343f1a265..baa6bd470d 100644
 --- a/Telegram/SourceFiles/core/launcher.cpp
 +++ b/Telegram/SourceFiles/core/launcher.cpp
 @@ -30,6 +30,10 @@ extern "C" {

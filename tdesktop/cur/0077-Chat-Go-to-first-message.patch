@@ -7,7 +7,7 @@ This patch is adapted from 64Gram.
 Original author: c0re100 <corehusky@gmail.com>
 
 diff --git a/Telegram/SourceFiles/window/window_peer_menu.cpp b/Telegram/SourceFiles/window/window_peer_menu.cpp
-index 934cbebe66..837f60334d 100644
+index 7f4c42aa68..b5078df59d 100644
 --- a/Telegram/SourceFiles/window/window_peer_menu.cpp
 +++ b/Telegram/SourceFiles/window/window_peer_menu.cpp
 @@ -25,6 +25,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL

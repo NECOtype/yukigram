@@ -5,7 +5,7 @@ Subject: [PATCH] (Major) Split Stickers and GIFs chat permission toggle
 
 
 diff --git a/Telegram/Resources/langs/lang.strings b/Telegram/Resources/langs/lang.strings
-index 0e8bee92e7..4261aa4686 100644
+index 4c3fd27643..d5976f6e8b 100644
 --- a/Telegram/Resources/langs/lang.strings
 +++ b/Telegram/Resources/langs/lang.strings
 @@ -7188,6 +7188,10 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL

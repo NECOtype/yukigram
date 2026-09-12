@@ -132,7 +132,7 @@ index 0000000000..9efde8c043
 +  </qresource>
 +</RCC>
 diff --git a/Telegram/SourceFiles/core/launcher.cpp b/Telegram/SourceFiles/core/launcher.cpp
-index 527133e65d..a8e56aeb76 100644
+index b3b76e088f..ed1b6ceae9 100644
 --- a/Telegram/SourceFiles/core/launcher.cpp
 +++ b/Telegram/SourceFiles/core/launcher.cpp
 @@ -19,6 +19,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL

@@ -46,7 +46,7 @@ index 784164db99..198efb8f88 100644
  #include "data/data_session.h"
  #include "core/application.h"
 diff --git a/Telegram/SourceFiles/window/window_session_controller.cpp b/Telegram/SourceFiles/window/window_session_controller.cpp
-index 8c7c5daad5..b4587ccd2e 100644
+index 64f31495e8..3976118ee4 100644
 --- a/Telegram/SourceFiles/window/window_session_controller.cpp
 +++ b/Telegram/SourceFiles/window/window_session_controller.cpp
 @@ -90,6 +90,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
@@ -57,7 +57,7 @@ index 8c7c5daad5..b4587ccd2e 100644
  #include "calls/calls_instance.h" // Core::App().calls().inCall().
  #include "calls/group/calls_group_call.h"
  #include "calls/group/calls_group_common.h"
-@@ -2628,6 +2629,7 @@ auto SessionController::computeColumnLayout() const -> ColumnLayout {
+@@ -2627,6 +2628,7 @@ auto SessionController::computeColumnLayout() const -> ColumnLayout {
  	auto dialogsWidth = 0, chatWidth = 0, thirdWidth = 0;
  
  	auto useOneColumnLayout = [&] {

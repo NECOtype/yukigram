@@ -5,10 +5,10 @@ Subject: [PATCH] (Annoyances) Remove copy restrictions
 
 
 diff --git a/Telegram/SourceFiles/history/history_inner_widget.cpp b/Telegram/SourceFiles/history/history_inner_widget.cpp
-index 6f4b2a2529..da4404d910 100644
+index 22dec9394a..1b18c83ed1 100644
 --- a/Telegram/SourceFiles/history/history_inner_widget.cpp
 +++ b/Telegram/SourceFiles/history/history_inner_widget.cpp
-@@ -3894,12 +3894,12 @@ void HistoryInner::showContextMenu(QContextMenuEvent *e, bool showFromTouch) {
+@@ -3892,12 +3892,12 @@ void HistoryInner::showContextMenu(QContextMenuEvent *e, bool showFromTouch) {
  }
  
  bool HistoryInner::hasCopyRestriction(HistoryItem *item) const {
@@ -23,7 +23,7 @@ index 6f4b2a2529..da4404d910 100644
  }
  
  bool HistoryInner::showCopyRestriction(HistoryItem *item) {
-@@ -3927,6 +3927,7 @@ bool HistoryInner::showCopyMediaRestriction(not_null<HistoryItem*> item) {
+@@ -3925,6 +3925,7 @@ bool HistoryInner::showCopyMediaRestriction(not_null<HistoryItem*> item) {
  }
  
  bool HistoryInner::hasCopyRestrictionForSelected() const {
@@ -32,7 +32,7 @@ index 6f4b2a2529..da4404d910 100644
  		return true;
  	}
 diff --git a/Telegram/SourceFiles/history/view/history_view_list_widget.cpp b/Telegram/SourceFiles/history/view/history_view_list_widget.cpp
-index 0f12be310e..f9b8ddd00a 100644
+index d25b4d5c7b..3ae6e9beea 100644
 --- a/Telegram/SourceFiles/history/view/history_view_list_widget.cpp
 +++ b/Telegram/SourceFiles/history/view/history_view_list_widget.cpp
 @@ -2140,18 +2140,16 @@ bool ListWidget::isEmpty() const {

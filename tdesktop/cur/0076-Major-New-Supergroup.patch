@@ -7,7 +7,7 @@ This patch is adapted from 64Gram.
 Original author: c0re100 <corehusky@gmail.com>
 
 diff --git a/Telegram/SourceFiles/window/window_main_menu.cpp b/Telegram/SourceFiles/window/window_main_menu.cpp
-index 667a10e00f..bb4e039968 100644
+index 0b337fab24..c36247fa14 100644
 --- a/Telegram/SourceFiles/window/window_main_menu.cpp
 +++ b/Telegram/SourceFiles/window/window_main_menu.cpp
 @@ -33,6 +33,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
@@ -35,10 +35,10 @@ index 667a10e00f..bb4e039968 100644
  			tr::lng_create_channel_title(),
  			{ &st::menuIconChannel }
 diff --git a/Telegram/SourceFiles/window/window_session_controller.cpp b/Telegram/SourceFiles/window/window_session_controller.cpp
-index b35fba471c..7e1322d6d3 100644
+index 52c3762284..a465c566ae 100644
 --- a/Telegram/SourceFiles/window/window_session_controller.cpp
 +++ b/Telegram/SourceFiles/window/window_session_controller.cpp
-@@ -3354,6 +3354,10 @@ void SessionController::showNewGroup() {
+@@ -3346,6 +3346,10 @@ void SessionController::showNewGroup() {
  	_window->show(Box<GroupInfoBox>(this, GroupInfoBox::Type::Group));
  }
  
@@ -50,10 +50,10 @@ index b35fba471c..7e1322d6d3 100644
  	_window->show(Box<GroupInfoBox>(this, GroupInfoBox::Type::Channel));
  }
 diff --git a/Telegram/SourceFiles/window/window_session_controller.h b/Telegram/SourceFiles/window/window_session_controller.h
-index 1af2eba052..4d9af49408 100644
+index 591913b2d0..c4c9163d73 100644
 --- a/Telegram/SourceFiles/window/window_session_controller.h
 +++ b/Telegram/SourceFiles/window/window_session_controller.h
-@@ -582,6 +582,7 @@ public:
+@@ -581,6 +581,7 @@ public:
  
  	void showAddContact();
  	void showNewGroup();
