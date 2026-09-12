@@ -32,9 +32,8 @@ telegram-desktop.overrideAttrs (final: prev: {
       changelog = "https://github.com/yukigram/yukigram/releases";
       mainProgram = "io.github.yukigram.devel";
     };
-    # 7.1 broke non-bundled cmark-gfm?
     # 7.2 requires pango?
-    buildInputs = [pango cairo tlottie] ++ lib.remove cmark-gfm prev.buildInputs;
+    buildInputs = [pango cairo tlottie] ++ prev.buildInputs;
   });
 
   # webkitgtk requires gstreamer for audio support
