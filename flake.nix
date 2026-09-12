@@ -10,7 +10,12 @@
     ];
   };
   outputs = {self, ...}: let
-    genAttrs = ks: f: builtins.listToAttrs (map (name: {inherit name; value = f name;}) ks);
+    genAttrs = ks: f:
+      builtins.listToAttrs (map (name: {
+          inherit name;
+          value = f name;
+        })
+        ks);
     d = genAttrs ["x86_64-linux" "aarch64-linux"] (system: import ./. {inherit system;});
   in {
     inherit d;

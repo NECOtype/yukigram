@@ -17,9 +17,11 @@ telegram-desktop.overrideAttrs (final: prev: {
       rev = "v7.2.8";
       hash = "sha256-Hhx65dqKlsoLvh7lEWYxnIiXFFd0qrDKpYYsHdhzqnk=";
     };
-    cmakeFlags = prev.cmakeFlags ++ [
-      (lib.cmakeBool "DEVEL" true)
-    ];
+    cmakeFlags =
+      prev.cmakeFlags
+      ++ [
+        (lib.cmakeBool "DEVEL" true)
+      ];
     patches = let
       readDir' = d: lib.pipe d [builtins.readDir builtins.attrNames (map (lib.path.append d))];
     in
