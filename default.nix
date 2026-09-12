@@ -36,7 +36,16 @@ in
       inherit sources;
 
       inputs = {
-        pkgs = import self.sources.nixpkgs {inherit system;};
+        pkgs' = import self.sources.nixpkgs {inherit system;};
+        pkgs = import (self.inputs.pkgs'.applyPatches {
+          src = self.sources.nixpkgs;
+          patches = [
+            (self.inputs.pkgs'.fetchpatch2 {
+              url = "https://github.com/NixOS/nixpkgs/commit/38e153832e182f89c3e6b815c3254b73d717178e.diff?full_index=1";
+              hash = "sha256-aqlZkA0jY75/gntlh4r9R7L+jwP12ke7rOD9yfuGeJs=";
+            })
+          ];
+        }) {inherit system;};
         nixpak = import self.sources.nixpak;
       };
 

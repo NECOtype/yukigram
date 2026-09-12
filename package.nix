@@ -6,6 +6,7 @@
   gst_all_1,
   pango,
   cairo,
+  tlottie,
 }:
 telegram-desktop.overrideAttrs (final: prev: {
   pname = "yukigram";
@@ -31,7 +32,7 @@ telegram-desktop.overrideAttrs (final: prev: {
     };
     # 7.1 broke non-bundled cmark-gfm?
     # 7.2 requires pango?
-    buildInputs = [pango cairo] ++ lib.remove cmark-gfm prev.buildInputs;
+    buildInputs = [pango cairo tlottie] ++ lib.remove cmark-gfm prev.buildInputs;
   });
 
   # webkitgtk requires gstreamer for audio support
