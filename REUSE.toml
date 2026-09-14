@@ -98,6 +98,7 @@ path = [
     "tdesktop/cur/*-Style-Revert-liquid-glass-peer-info-tab-strip.patch",
     "tdesktop/cur/*-Info-Community-ID.patch",
     "tdesktop/cur/*-Style-Revert-restore-windows-pill.patch",
+    "tdesktop/cur/*-Annoyances-Hide-Pasted-as-plain-text-toast.patch",
 ]
 SPDX-License-Identifier = "GPL-3.0-or-later WITH LicenseRef-sqlitestudio-OpenSSL-exception"
 SPDX-FileCopyrightText = "Yukigram contributors <https://github.com/yukigram/yukigram>"

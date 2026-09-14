@@ -6,10 +6,10 @@ Subject: [PATCH] (Translations) Russian
 
 diff --git a/Telegram/Resources/langs/yukigram/ru.json b/Telegram/Resources/langs/yukigram/ru.json
 new file mode 100644
-index 0000000000..f8e422a1e5
+index 0000000000..dc2eb292b5
 --- /dev/null
 +++ b/Telegram/Resources/langs/yukigram/ru.json
-@@ -0,0 +1,190 @@
+@@ -0,0 +1,192 @@
 +{
 +    "about/1/text": "Неофициальный форк {tdesktop_link},\nкоторый добавляет фичи и убирает мусор.",
 +    "about/1/tdesktop": "Telegram Desktop",
@@ -120,6 +120,8 @@ index 0000000000..f8e422a1e5
 +    "opt/hide-popular-sticker-suggest/desc": "",
 +    "opt/hide-reply-background-emoji/name": "Скрыть эмодзи фона в ответах",
 +    "opt/hide-reply-background-emoji/desc": "",
++    "opt/hide-rich-paste-toast/name": "Скрыть \"вставлено без форматирования\"",
++    "opt/hide-rich-paste-toast/desc": "",
 +    "opt/hide-send-as/name": "Скрыть кнопку «Отправить от»",
 +    "opt/hide-send-as/desc": "",
 +    "opt/hide-send-as-premium/name": "Скрыть Premium-каналы в «Отправить от»",

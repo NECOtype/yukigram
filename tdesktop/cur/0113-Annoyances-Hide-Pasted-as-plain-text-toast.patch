@@ -1,0 +1,56 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Yuki Sireneva <sylfn@disroot.org>
+Date: Mon, 14 Sep 2026 05:26:57 +0000
+Subject: [PATCH] (Annoyances) Hide "Pasted as plain text" toast
+
+
+diff --git a/Telegram/SourceFiles/chat_helpers/rich_paste_toast.cpp b/Telegram/SourceFiles/chat_helpers/rich_paste_toast.cpp
+index 344965be02..cd51c0c240 100644
+--- a/Telegram/SourceFiles/chat_helpers/rich_paste_toast.cpp
++++ b/Telegram/SourceFiles/chat_helpers/rich_paste_toast.cpp
+@@ -21,6 +21,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
+ #include "ui/widgets/buttons.h"
+ #include "styles/style_chat.h"
+ #include "styles/style_chat_helpers.h"
++#include "yukigram/settings/hide_rich_paste_toast.h"
+ 
+ #include <QtCore/QMimeData>
+ 
+@@ -94,6 +95,7 @@ std::shared_ptr<QMimeData> CloneMimeData(not_null<const QMimeData*> data) {
+ }
+ 
+ void ShowRichPasteToast(RichPasteToastArgs &&args) {
++	if (Yukigram::Settings::HideRichPasteToast->current()) return;
+ 	const auto session = args.session;
+ 	const auto undo = (args.offer == RichPasteOffer::Plain);
+ 	const auto field = (args.offer == RichPasteOffer::Field);
+diff --git a/Telegram/SourceFiles/yukigram/settings/hide_rich_paste_toast.cpp b/Telegram/SourceFiles/yukigram/settings/hide_rich_paste_toast.cpp
+new file mode 100644
+index 0000000000..6114c0c271
+--- /dev/null
++++ b/Telegram/SourceFiles/yukigram/settings/hide_rich_paste_toast.cpp
+@@ -0,0 +1,13 @@
++#include "yukigram/settings/hide_rich_paste_toast.h"
++#include "yukigram/options.h"
++
++namespace Yukigram::Settings {
++
++rpl::variable<bool> *HideRichPasteToast = Yukigram::Options::make<bool>(kOptionHideRichPasteToast, {
++	.keywords = { u"yukigram"_q, u"rich"_q, u"paste"_q, u"plain"_q, u"toast"_q },
++	.category = "compose",
++});
++
++const char kOptionHideRichPasteToast[] = "hide-rich-paste-toast";
++
++}
+diff --git a/Telegram/SourceFiles/yukigram/settings/hide_rich_paste_toast.h b/Telegram/SourceFiles/yukigram/settings/hide_rich_paste_toast.h
+new file mode 100644
+index 0000000000..4e902ca764
+--- /dev/null
++++ b/Telegram/SourceFiles/yukigram/settings/hide_rich_paste_toast.h
+@@ -0,0 +1,5 @@
++#include "rpl/rpl.h"
++namespace Yukigram::Settings {
++extern rpl::variable<bool> *HideRichPasteToast;
++extern const char kOptionHideRichPasteToast[];
++}

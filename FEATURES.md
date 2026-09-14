@@ -75,6 +75,7 @@ This is what I mean by "minus the bullshit"
 - Unshare phone number by default when adding contact
 - Send large photos by default
 - :zap: Disable AI Instant View summaries
+- :zap: Hide "Pasted as plain text" toast
 
 [OpenStreetMap]: https://openstreetmap.org
 

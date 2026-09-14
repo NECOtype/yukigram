@@ -6,10 +6,10 @@ Subject: [PATCH] (Translations) English
 
 diff --git a/Telegram/Resources/langs/yukigram/en.json b/Telegram/Resources/langs/yukigram/en.json
 new file mode 100644
-index 0000000000..0880805137
+index 0000000000..c5a3c98399
 --- /dev/null
 +++ b/Telegram/Resources/langs/yukigram/en.json
-@@ -0,0 +1,184 @@
+@@ -0,0 +1,186 @@
 +{
 +    "about/1/text": "Unofficial {tdesktop_link} fork\nthat adds features and removes annoyances.",
 +    "about/1/tdesktop": "Telegram Desktop",
@@ -114,6 +114,8 @@ index 0000000000..0880805137
 +    "opt/hide-popular-sticker-suggest/desc": "",
 +    "opt/hide-reply-background-emoji/name": "Hide reply background emoji",
 +    "opt/hide-reply-background-emoji/desc": "",
++    "opt/hide-rich-paste-toast/name": "Hide \"Pasted as plain text\"",
++    "opt/hide-rich-paste-toast/desc": "",
 +    "opt/hide-send-as/name": "Hide Send As button",
 +    "opt/hide-send-as/desc": "",
 +    "opt/hide-send-as-premium/name": "Hide Send As channels requiring Premium",
